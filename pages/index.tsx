@@ -6,6 +6,14 @@ import styles from '@/styles/Home.module.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+   async function fetchData() {
+    const response = await fetch('https://jsonplaceholder.typicode.com/todos/')
+    const data = await response.json()
+    console.log("data", data)
+  }
+
+  fetchData()
+  
   return (
     <>
       <Head>
